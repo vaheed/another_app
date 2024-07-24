@@ -22,21 +22,3 @@ jobs:
     - name: Build and push Docker image
       run: |
         docker buildx build --push --tag ${{ secrets.DOCKER_USERNAME }}/simple-web-app:latest .
-    
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Kubectl
-      uses: azure/setup-kubectl@v1
-      with:
-        version: v1.19.11
-
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/service.yaml
