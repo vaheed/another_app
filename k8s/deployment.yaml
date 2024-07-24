@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-web-app
+  template:
+    metadata:
+      labels:
+        app: simple-web-app
+    spec:
+      containers:
+      - name: simple-web-app
+        image: vaheed/simple-web-app:latest
+        ports:
+        - containerPort: 3000
