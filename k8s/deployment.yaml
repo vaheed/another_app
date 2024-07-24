@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-web-app
-  annotations:
-      keel.sh/policy: force
 spec:
   replicas: 3
   selector:
