@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-web-app
-        image: vaheed/simple-web-app:commit-hash
+        image: vaheed/simple-web-app:${IMAGE_TAG}
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
