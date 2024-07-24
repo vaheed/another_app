@@ -28,5 +28,5 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker buildx build --push --tag vaheed/simple-web-app:${{ steps.vars.outputs.hash }} .
-    
+        IMAGE_TAG=${{ steps.vars.outputs.hash }}
+        docker buildx build --push --tag vaheed/simple-web-app:${IMAGE_TAG} .
