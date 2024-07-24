@@ -10,10 +10,10 @@ imageScans:
       order: asc
 
   # specify images to scan
-  image: "vaheed/simple-web-app:latest"
+  image: "vaheed/simple-web-app"
 
   # Specify the tag name, it has to be unique in the same bundle
-  tagName: test-scan
+  tagName: latest
 
   # Specify the scan interval
   interval: 1m
