@@ -1,0 +1,6 @@
+defaultNamespace: default
+targets:
+  - name: production
+    clusterSelector:
+      matchLabels:
+        environment: production
