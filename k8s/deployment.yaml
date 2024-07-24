@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-web-app
-        image: vaheed/simple-web-app:latest
+        image: vaheed/simple-web-app
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
