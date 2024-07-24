@@ -30,9 +30,3 @@ jobs:
       run: |
         docker buildx build --push --tag vaheed/simple-web-app:${{ steps.vars.outputs.hash }} .
     
-    - name: Update Kubernetes deployment
-      env:
-        KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-      run: |
-        echo "${KUBE_CONFIG_DATA}" | base64 --decode > $HOME/.kube/config
-        kubectl set image deployment/simple-web-app simple-web-app=vaheed/simple-web-app:${{ steps.vars.outputs.hash }}
