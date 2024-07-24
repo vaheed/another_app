@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-web-app
-        image: your-docker-username/simple-web-app:commit-hash
+        image: vaheed/simple-web-app:commit-hash
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
