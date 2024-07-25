@@ -18,7 +18,7 @@ function getLocalIpAddress() {
 
 app.get('/', (req, res) => {
   const ipAddress = getLocalIpAddress();
-  res.send(`Hello, vaheeD 01! This app is running on IP address: ${ipAddress}`);
+  res.send(`Hello, vaheeD 02! This app is running on IP address: ${ipAddress}`);
 });
 
 app.listen(port, () => {
