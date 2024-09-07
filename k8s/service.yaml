@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: simple-web-app
+  name: simple-web-app-ha
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 3000
   selector:
-    app: simple-web-app
+    app: simple_web_app_ha

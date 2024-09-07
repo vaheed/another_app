@@ -18,7 +18,7 @@ function getLocalIpAddress() {
 
 app.get('/', (req, res) => {
   const ipAddress = getLocalIpAddress();
-  res.send(`Hello, Vaheed! This app is running on IP address: ${ipAddress}`);
+  res.send(`Hello from Simple Web App HA! This app is running on IP address: ${ipAddress}`);
 });
 
 // Add a health check endpoint

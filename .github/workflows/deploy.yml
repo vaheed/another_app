@@ -21,4 +21,4 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker buildx build --push --tag ${{ secrets.DOCKER_USERNAME }}/simple-web-app:latest .
+        docker buildx build --push --tag ${{ secrets.DOCKER_USERNAME }}/simple_web_app_ha:latest .

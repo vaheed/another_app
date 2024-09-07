@@ -1,5 +1,5 @@
 {
-  "name": "vaheed-web-app",
+  "name": "simple_web_app_ha",
   "version": "1.0.0",
   "description": "A simple Node.js web app for Vaheed.",
   "main": "app.js",

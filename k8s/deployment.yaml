@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vaheed-web-app
+  name: simple-web-app-ha
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: vaheed-web-app
+      app: simple_web_app_ha
   template:
     metadata:
       labels:
-        app: vaheed-web-app
+        app: simple_web_app_ha
     spec:
       containers:
-      - name: vaheed-web-app
-        image: vaheed/vaheed-web-app:latest
+      - name: simple_web_app_ha
+        image: vaheed/simple_web_app_ha:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
